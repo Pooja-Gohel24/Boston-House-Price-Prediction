@@ -2,51 +2,119 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boston House Prediction</title>
+
+    <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+          crossorigin="anonymous">
+  <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+          crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+  section
+  {
+    margin-top:50px;
+  }
+
+      *
+    {
+        margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+    }
+    
+</style>
 </head>
-<body>
-    <form action="/predict" method="post">
-        <label>CRIM:</label><br>
-        <input type="text" name="CRIM"><br>
+<body class="bg-light">
 
-        <label>ZN:</label><br>
-        <input type="text" name="ZN"><br>
+<section>
+  <div class="container d-flex justify-content-center align-items-center min-vh-100">
+    <div class="card shadow p-4" style="max-width: 600px; width: 100%;">
+      <h2 class="text-center">Boston House Prediction</h2>
+     
 
-        <label>CRIM:</label><br>
-        <input type="text" name="INDUS"><br>
+     <form action="/predict" method="post">
+ 
 
-        <label>CRIM:</label><br>
-        <input type="text" name="CHAS"><br>
+        <div class="mb-3">
+          <label class="form-label">CRIM</label>
+          <input type="text" class="form-control"  name="CRIM" >
+        </div>
+        
 
-        <label>CRIM:</label><br>
-        <input type="text" name="NOX"><br>
+        
+        <div class="mb-3">
+          <label class="form-label">ZN:</label>
+          <input type="text" class="form-control"  name="ZN" >
+        </div>
+        
+        <div class="mb-3">
+          <label class="form-label">INDUS:</label>
+          <input type="text" class="form-control"  name="INDUS" >
+        </div>
+        
+        <div class="mb-3">
+          <label class="form-label">CHAS:</label>
+          <input type="text" class="form-control"  name="CHAS" >
+        </div>
+        
+        
 
-        <label>CRIM:</label><br>
-        <input type="text" name="RM"><br>
-
-        <label>CRIM:</label><br>
-        <input type="text" name="AGE"><br>
-
-        <label>CRIM:</label><br>
-        <input type="text" name="DIS"><br>
-
-        <label>CRIM:</label><br>
-        <input type="text" name="RAD"><br>
-
-        <label>CRIM:</label><br>
-        <input type="text" name="TAX"><br>
-
-        <label>CRIM:</label><br>
-        <input type="text" name="PIRATIO"><br>
-
-        <label>CRIM:</label><br>
-        <input type="text" name="B"><br>
-
-        <label>CRIM:</label><br>
-        <input type="text" name="LSTAT"><br>
+        <div class="mb-3">
+          <label class="form-label">NOX:</label>
+          <input type="text" class="form-control"  name="NOX" >
+        </div>
+    
+        <div class="mb-3">
+          <label class="form-label">RM:</label>
+          <input type="text" class="form-control"  name="RM" >
+        </div>
+          
+        <div class="mb-3">
+          <label class="form-label">AGe:</label>
+          <input type="text" class="form-control"  name="AGE" >
+        </div>
+        <div class="mb-3">
+          <label class="form-label">DIS:</label>
+          <input type="text" class="form-control"  name="DIS" >
+        </div>
+       
+        <div class="mb-3">
+          <label class="form-label">RAD:</label>
+          <input type="text" class="form-control"  name="RAD" >
+        </div>
+       
+        <div class="mb-3">
+          <label class="form-label">TAX:</label>
+          <input type="text" class="form-control"  name="TAX" >
+        </div>
+   
+        <div class="mb-3">
+          <label class="form-label">PIRATIO:</label>
+          <input type="text" class="form-control"  name="PIRATIO" >
+        </div>
       
-        <br>
-        <input type="submit" value="predict">
+        <div class="mb-3">
+          <label class="form-label">B:</label>
+          <input type="text" class="form-control"  name="B" >
+        </div>
+        
+        <div class="mb-3">
+          <label class="form-label">LSTAT:</label>
+          <input type="text" class="form-control"  name="LSTAT" >
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100">Predict</button>
+      </form>
+    </div>
+  </div>
+</section>
+        
     </form>
 
     {% if prediction_text %}
@@ -54,3 +122,6 @@
     {% endif %}
 </body>
 </html>
+
+
+  
