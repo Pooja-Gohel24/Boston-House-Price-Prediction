@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="/predict" method="post">
+        <label>CRIM:</label><br>
+        <input type="text" name="CRIM"><br>
+
+        <label>ZN:</label><br>
+        <input type="text" name="ZN"><br>
+
+        <label>CRIM:</label><br>
+        <input type="text" name="INDUS"><br>
+
+        <label>CRIM:</label><br>
+        <input type="text" name="CHAS"><br>
+
+        <label>CRIM:</label><br>
+        <input type="text" name="NOX"><br>
+
+        <label>CRIM:</label><br>
+        <input type="text" name="RM"><br>
+
+        <label>CRIM:</label><br>
+        <input type="text" name="AGE"><br>
+
+        <label>CRIM:</label><br>
+        <input type="text" name="DIS"><br>
+
+        <label>CRIM:</label><br>
+        <input type="text" name="RAD"><br>
+
+        <label>CRIM:</label><br>
+        <input type="text" name="TAX"><br>
+
+        <label>CRIM:</label><br>
+        <input type="text" name="PIRATIO"><br>
+
+        <label>CRIM:</label><br>
+        <input type="text" name="B"><br>
+
+        <label>CRIM:</label><br>
+        <input type="text" name="LSTAT"><br>
+      
+        <br>
+        <input type="submit" value="predict">
+    </form>
+
+    {% if prediction_text %}
+        <h3>{{prediction_text}}</h3>
+    {% endif %}
+</body>
+</html>
